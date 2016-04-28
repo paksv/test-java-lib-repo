@@ -4,7 +4,7 @@
   <description />
   <settings ref="TestJavaRepo_MyTemplate">
     <parameters />
-    <build-runners order="RUNNER_1, RUNNER_2" />
+    <build-runners order="RUNNER_1, RUNNER_2, RUNNER_6" />
     <vcs-settings />
     <requirements />
     <build-triggers />
