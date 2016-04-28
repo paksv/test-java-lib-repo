@@ -5,7 +5,7 @@ import java.util.Comparator;
 public class Executor {
 
     public void execute(String[] args, Comparator<String> comparator, String mainClassName) {
-        if (args.length < 2){
+        if (args.length < 3){
             System.err.printf("Usage tcdemo.%s <path1> <path2>%n", mainClassName);
             System.exit(2);
         }
