@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8e5d3837-4bcb-4e39-880a-50f0d64b89ce" type="jetbrains.git" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Repo</name>
+  <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
+  <param name="agentCleanPolicy" value="ON_BRANCH_CHANGE" />
+  <param name="authMethod" value="PASSWORD" />
+  <param name="branch" value="refs/heads/master" />
+  <param name="ignoreKnownHosts" value="true" />
+  <param name="push_url" value="https://github.com/paksv/test-java-lib-repo.git" />
+  <param name="secure:password" value="zxxb71d3bc57e56fac3775d03cbe80d301b" />
+  <param name="submoduleCheckout" value="CHECKOUT" />
+  <param name="teamcity:branchSpec"><![CDATA[refs/pull/(*/head)
+refs/pull/(*/merge)]]></param>
+  <param name="url" value="https://github.com/paksv/test-java-lib-repo.git" />
+  <param name="useAlternates" value="true" />
+  <param name="username" value="paksv" />
+  <param name="usernameStyle" value="USERID" />
+</vcs-root>
+
