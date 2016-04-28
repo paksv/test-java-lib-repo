@@ -3,7 +3,9 @@
   <name>Restore DB</name>
   <description />
   <settings>
-    <parameters />
+    <parameters>
+      <param name="a" value="0" />
+    </parameters>
     <build-runners>
       <runner id="RUNNER_4" name="" type="simpleRunner">
         <parameters>
