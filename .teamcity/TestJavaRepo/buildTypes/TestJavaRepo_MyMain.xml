@@ -3,7 +3,9 @@
   <name>My main</name>
   <description />
   <settings>
-    <parameters />
+    <parameters>
+      <param name="login" value="" spec="text label='Login' validationMode='any' display='prompt'" />
+    </parameters>
     <build-runners />
     <vcs-settings />
     <requirements />
