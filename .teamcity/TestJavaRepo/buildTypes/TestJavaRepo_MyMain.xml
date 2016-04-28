@@ -7,7 +7,16 @@
       <param name="login" value="" spec="text label='Login' validationMode='any' display='prompt'" />
       <param name="pwd" value="zxx775d03cbe80d301b" spec="password display='prompt' label='Password'" />
     </parameters>
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_5" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo %login% 
+echo %pwd%]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings />
     <requirements />
     <build-triggers />
