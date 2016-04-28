@@ -4,7 +4,7 @@
   <description />
   <settings>
     <parameters>
-      <param name="a" value="1" />
+      <param name="a" value="0" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_4" name="" type="simpleRunner">
