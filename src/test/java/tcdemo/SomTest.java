@@ -1,5 +1,6 @@
 package tcdemo;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -17,7 +18,7 @@ public class SomTest {
     }
 
     public void test1(){
-        System.out.println("test1");
+        Assert.fail("Hello");
     }
 
     public void test2(){
