@@ -22,10 +22,6 @@ public class MyTest {
 
     }
 
-    public void test4_failed(){
-        Assert.fail("Just fail");
-    }
-
     public void test5_skip(){
         throw new SkipException("Just skip");
     }
