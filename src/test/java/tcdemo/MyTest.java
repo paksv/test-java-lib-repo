@@ -13,7 +13,7 @@ import java.io.IOException;
 public class MyTest {
 
     public void test1(){
-	throw new RuntimeException("fail");
+
     }
 
     public void test2() throws IOException {
@@ -22,6 +22,11 @@ public class MyTest {
 
     public void test3(){
 
+    }
+
+    public void test_conditionally(){
+        final String osName = System.getProperty("param.os.name");
+        Assert.assertEquals("Linux", osName);
     }
 
     public void test5_skip(){
