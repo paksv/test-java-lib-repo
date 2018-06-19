@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class MyTest {
 
     public void test1(){
-
+	throw new RuntimeException("fail");
     }
 
     public void test2(){
