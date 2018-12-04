@@ -45,9 +45,9 @@ object Build : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true"
             mavenVersion = defaultProvidedVersion()
         }
-        script{
-            scriptContent="./test.sh"
+        script {
             executionMode = BuildStep.ExecutionMode.ALWAYS
+            scriptContent = "./test.sh"
         }
     }
 
