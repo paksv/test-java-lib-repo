@@ -47,6 +47,7 @@ object Build : BuildType({
         }
         script{
             scriptContent="./test.sh"
+            executionMode = BuildStep.ExecutionMode.ALWAYS
         }
     }
 
