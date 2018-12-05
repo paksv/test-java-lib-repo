@@ -1,6 +1,10 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2018_1.*
+import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.VisualStudioStep
+import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.visualStudio
 import jetbrains.buildServer.configs.kotlin.v2018_1.ui.*
 
 /*
@@ -12,5 +16,28 @@ changeBuildType(RelativeId("Build")) {
     vcs {
         expectEntry(DslContext.settingsRoot.id!!)
         root(DslContext.settingsRoot.id!!, ".=>src")
+    }
+
+    expectSteps {
+        maven {
+            goals = "clean test"
+            runnerArgs = "-Dmaven.test.failure.ignore=true"
+            mavenVersion = defaultProvidedVersion()
+        }
+        script {
+            executionMode = BuildStep.ExecutionMode.ALWAYS
+            scriptContent = "./test.sh"
+        }
+    }
+    steps {
+        insert(2) {
+            visualStudio {
+                path = "aaa.sln"
+                version = VisualStudioStep.VisualStudioVersion.vs2017
+                runPlatform = VisualStudioStep.Platform.x86
+                msBuildVersion = VisualStudioStep.MSBuildVersion.V15_0
+                msBuildToolsVersion = VisualStudioStep.MSBuildToolsVersion.V15_0
+            }
+        }
     }
 }
