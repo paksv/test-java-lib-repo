@@ -40,4 +40,10 @@ changeBuildType(RelativeId("Build")) {
             }
         }
     }
+
+    requirements {
+        add {
+            moreThan("teamcity.agent.hardware.memorySizeMb", "4096")
+        }
+    }
 }
