@@ -32,6 +32,7 @@ changeBuildType(RelativeId("Build")) {
     steps {
         insert(2) {
             visualStudio {
+                enabled = false
                 path = "aaa.sln"
                 version = VisualStudioStep.VisualStudioVersion.vs2017
                 runPlatform = VisualStudioStep.Platform.x86
