@@ -37,8 +37,8 @@ public class MyTest {
     }
 
     public void test_conditionally(){
-        final String osName = System.getProperty("param.os.name");
-        Assert.assertEquals("Linux", osName);
+        final String failTest = System.getProperty("fail.test");
+        Assert.assertNotSame("true", failTest);
     }
 
     public void test5_skip(){
